@@ -8,3 +8,13 @@
   width: 48px;
   height: 60px;
 }
+
+div.heading {
+	width: 500px;
+	margin: auto;
+}
+
+div.tile_display {
+	width: 500px;
+	margin: auto;
+}
