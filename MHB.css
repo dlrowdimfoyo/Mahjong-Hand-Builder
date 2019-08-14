@@ -1,0 +1,10 @@
+.tile {
+  width: 48px;
+  height: 60px;
+  cursor: pointer;
+}
+
+#tile {
+  width: 48px;
+  height: 60px;
+}
