@@ -6,4 +6,6 @@ Aug. 13: I now have everything centered with a fixed width. There is a box for w
 
 Aug. 14: I've limited the number of times each tile can be clicked to 4.
 
-Next steps: open melds, kans, limit hand, reorganize hand, drawn tile
+Aug. 28: A warning will show up if there are fewer than 14 tiles selected.
+
+Next steps: reorganize hand, open melds, kans, limit hand, drawn tile

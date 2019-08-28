@@ -5,6 +5,8 @@ var pin = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 var wind = [0, 0, 0, 0]
 var dragon = [0, 0, 0]
 
+const add = (a, b) => a + b
+
 var tile_select = function(e) {
   var new_tile = document.createElement("img")
   var img = e.target
@@ -47,6 +49,14 @@ var disable_tile = function(id) {
 	document.getElementById(id).style.opacity = "0.2"
 	document.getElementById(id).style.cursor = "default"
 	document.getElementById(id).removeEventListener("click", tile_select)
+}
+
+var reorganize = function() {
+	var hand_sum = man.reduce(add) + sou.reduce(add) + pin.reduce(add) + wind.reduce(add) + dragon.reduce(add)
+	if (hand_sum < 14) {
+		document.getElementById("final_hand").innerHTML = "Not enough tiles"
+	} else {
+	}
 }
 
 for (var i = 0; i < tiles.length; i++) {
