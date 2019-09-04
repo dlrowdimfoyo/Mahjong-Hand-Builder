@@ -8,4 +8,6 @@ Aug. 14: I've limited the number of times each tile can be clicked to 4.
 
 Aug. 28: A warning will show up if there are fewer than 14 tiles selected.
 
-Next steps: reorganize hand, open melds, kans, limit hand, drawn tile
+Sep. 4: The reorganize hand button now will take the tiles that appear under "Selected Tiles" and reorganize them into the proper order.
+
+Next steps: open melds, kans, limit hand, drawn tile
