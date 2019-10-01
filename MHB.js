@@ -45,12 +45,37 @@ var tile_select = function(e) {
 		  disable_tile(id)
 	  }
   }
+  var hand_sum = man.reduce(add) + sou.reduce(add) + pin.reduce(add) + wind.reduce(add) + dragon.reduce(add)
+  if (hand_sum == 14) {
+	  disable_all()
+  }
 }
 
 var disable_tile = function(id) {
 	document.getElementById(id).style.opacity = "0.2"
 	document.getElementById(id).style.cursor = "default"
 	document.getElementById(id).removeEventListener("click", tile_select)
+}
+
+var disable_all = function() {
+	var suits = ["man", "sou", "pin"]
+	for (var i = 1; i < 10; i++) {
+		for (var j = 0; j < 3; j++) {
+			document.getElementById(suits[j] + i).style.opacity = "0.2"
+			document.getElementById(suits[j] + i).style.cursor = "default"
+			document.getElementById(suits[j] + i).removeEventListener("click", tile_select)
+		}
+	}
+	for (var i = 1; i < 5; i++) {
+		document.getElementById("win" + i).style.opacity = "0.2"
+		document.getElementById("win" + i).style.cursor = "default"
+		document.getElementById("win" + i).removeEventListener("click", tile_select)
+	}
+	for (var i = 1; i < 4; i++) {
+		document.getElementById("dra" + i).style.opacity = "0.2"
+		document.getElementById("dra" + i).style.cursor = "default"
+		document.getElementById("dra" + i).removeEventListener("click", tile_select)
+	}
 }
 
 var reorganize = function() {
